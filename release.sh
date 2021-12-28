@@ -4,7 +4,7 @@ echo "== Copying Dotfiles =="
 
 # global git config resources
 cp ~/.gitignore ./.gitignore
-cp ~/.gitconfig ./gitconfig
+cp ~/.gitconfig ./.gitconfig
 
 # x files
 cp ~/.Xresources ./.Xresources
