@@ -1,0 +1,10 @@
+#!/bin/sh
+
+xrdb -merge "$HOME/.Xresources"
+
+setxkbmap -option caps:escape
+xset mouse 1 0
+xset dpms 3600 3600 3600
+xset s 3600 3600
+
+feh --bg-fill --randomize ~/pictures/wallpaper/*
