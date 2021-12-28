@@ -27,4 +27,10 @@ cp ~/.config/nvim/init.vim ./nvim/init.vim
 # pavucontrol
 cp ~/.config/pavucontrol.ini ./pavucontrol.ini
 
+# emacs files
+mkdir -p .emacs.d
+cp ~/.emacs ./.emacs
+cp ~/.emacs.d/configuration.org ./.emacs.d/configuration.org
+cp ~/.emacs.d/configuration.el ./.emacs.d/configuration.el
+
 echo "== Finished! =="
