@@ -33,4 +33,9 @@ cp ~/.emacs ./.emacs
 cp ~/.emacs.d/configuration.org ./.emacs.d/configuration.org
 cp ~/.emacs.d/configuration.el ./.emacs.d/configuration.el
 
+# rofi configuration
+
+mkdir -p rofi
+cp -r ~/.config/rofi/* ./rofi
+
 echo "== Finished! =="

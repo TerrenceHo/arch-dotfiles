@@ -6,12 +6,12 @@ URxvt.perl-ext-common: keyboard-select,resize-font,default
 !--------------------------------
 ! Rofi Config
 !--------------------------------
-rofi.color-enabled: true
-rofi.color-window: #000, #000, #000
-rofi.color-normal: argb:00273238, #c1c1c1, argb:3a273238, #394249, #ffffff
-rofi.color-active: argb:00273238, #80cbc4, argb:3a273238, #394249, #80cbc4
-rofi.color-urgent: argb:00273238, #ff1844, argb:3a273238, #394249, #ff1844
-rofi.hide-scrollbar: true
+! rofi.color-enabled: true
+! rofi.color-window: #000, #000, #000
+! rofi.color-normal: argb:00273238, #c1c1c1, argb:3a273238, #394249, #ffffff
+! rofi.color-active: argb:00273238, #80cbc4, argb:3a273238, #394249, #80cbc4
+! rofi.color-urgent: argb:00273238, #ff1844, argb:3a273238, #394249, #ff1844
+! rofi.hide-scrollbar: true
 
 !--------------------------------
 ! Xft Settings
