@@ -97,10 +97,12 @@ Using doom-city-lights theme.
 
 ** UI
 
-Don't want scroll bar, takes up space.
+Don't want scroll bar, menu-bar, or tool-bar, takes up space.
 
 #+BEGIN_SRC emacs-lisp
-  (scroll-bar-mode -1)
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
 #+END_SRC
 
 When scrolling, emacs recenters buffer point. I don't want that to happen, and I

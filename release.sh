@@ -20,6 +20,9 @@ cp ~/.config/i3/config ./i3/config
 mkdir -p i3status 
 cp ~/.config/i3status/config ./i3status/config
 
+# tmux configs
+cp ~/.tmux.conf ./.tmux.conf
+
 # nvim configs
 mkdir -p nvim
 cp ~/.config/nvim/init.vim ./nvim/init.vim
@@ -34,8 +37,11 @@ cp ~/.emacs.d/configuration.org ./.emacs.d/configuration.org
 cp ~/.emacs.d/configuration.el ./.emacs.d/configuration.el
 
 # rofi configuration
-
 mkdir -p rofi
 cp -r ~/.config/rofi/* ./rofi
+
+# config scripts related
+mkdir -p scripts
+cp -r ~/scripts/ ./
 
 echo "== Finished! =="
