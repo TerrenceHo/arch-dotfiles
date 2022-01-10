@@ -1,9 +1,11 @@
 alias vi="nvim"
 alias vim="nvim"
 alias g="git"
+alias tmux="tmux -2"
 
 alias sz="source ~/.zshrc"
 alias vz="vim ~/.zshrc"
+alias tn="tmux new -s init || tmux attach -t init"
 
 # Safety
 alias rm="rm -i"

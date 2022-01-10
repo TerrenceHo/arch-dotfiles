@@ -558,16 +558,12 @@ first install it.
 (use-package elfeed
   :bind (:map elfeed-search-mode-map
 			  ("R" . elfeed-mark-all-as-read)
-			  ("0" . elfeed-read-all)
-			  ("1" . elfeed-read-news)
+			  ("1" . elfeed-read-all)
 			  ("2" . elfeed-read-software-development)
 			  ("3" . elfeed-read-personal-finance)
 			  ("4" . elfeed-read-finance)
-			  ("5" . elfeed-read-scientific-journals)
-			  ("6" . elfeed-read-comics)
-			  ("7" . elfeed-read-friends)
-			  ("8" . elfeed-read-boardgames)
-			  ("9" . elfeed-read-trading)
+			  ("5" . elfeed-read-comics)
+			  ("6" . elfeed-read-friends)
 			  )
   :init
   (setq my/default-elfeed-search-filter "@1-month-ago +unread")
@@ -598,11 +594,6 @@ first install it.
     (interactive)
     (elfeed--read-tag my/default-elfeed-search-filter "all"))
 
-  (defun elfeed-read-news ()
-    "Show global news articles"
-    (interactive)
-    (elfeed--read-tag "@1-month-ago +unread +news" "news"))
-
   (defun elfeed-read-software-development ()
 	"Show software development articles"
 	(interactive)
@@ -618,11 +609,6 @@ first install it.
 	(interactive)
 	(elfeed--read-tag "@1-month-ago +unread +finance" "finance"))
 
-  (defun elfeed-read-scientific-journals ()
-    "Show scientific news from major journals"
-    (interactive)
-    (elfeed--read-tag "@1-month-ago +unread +sciencejournal" "scientific journals"))
-
   (defun elfeed-read-comics ()
 	"show comics"
 	(interactive)
@@ -632,16 +618,7 @@ first install it.
 	"show friends articles"
 	(interactive)
 	(elfeed--read-tag "@1-month-ago +unread +friends" "friends"))
-
-  (defun elfeed-read-boardgames ()
-	"show boardgames articles"
-	(interactive)
-	(elfeed--read-tag "@1-month-ago +unread +boardgames" "boardgames"))
-  (defun elfeed-read-trading ()
-	"show trading articles"
-	(interactive)
-	(elfeed--read-tag "@1-month-ago +unread +trading" "trading"))
-  )
+)
 #+END_SRC
 
 Instead of listing all my sources in the config file, I want to be able to

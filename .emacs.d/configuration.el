@@ -263,16 +263,12 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
 (use-package elfeed
   :bind (:map elfeed-search-mode-map
 			  ("R" . elfeed-mark-all-as-read)
-			  ("0" . elfeed-read-all)
-			  ("1" . elfeed-read-news)
+			  ("1" . elfeed-read-all)
 			  ("2" . elfeed-read-software-development)
 			  ("3" . elfeed-read-personal-finance)
 			  ("4" . elfeed-read-finance)
-			  ("5" . elfeed-read-scientific-journals)
-			  ("6" . elfeed-read-comics)
-			  ("7" . elfeed-read-friends)
-			  ("8" . elfeed-read-boardgames)
-			  ("9" . elfeed-read-trading)
+			  ("5" . elfeed-read-comics)
+			  ("6" . elfeed-read-friends)
 			  )
   :init
   (setq my/default-elfeed-search-filter "@1-month-ago +unread")
@@ -303,11 +299,6 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
     (interactive)
     (elfeed--read-tag my/default-elfeed-search-filter "all"))
 
-  (defun elfeed-read-news ()
-    "Show global news articles"
-    (interactive)
-    (elfeed--read-tag "@1-month-ago +unread +news" "news"))
-
   (defun elfeed-read-software-development ()
 	"Show software development articles"
 	(interactive)
@@ -323,11 +314,6 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
 	(interactive)
 	(elfeed--read-tag "@1-month-ago +unread +finance" "finance"))
 
-  (defun elfeed-read-scientific-journals ()
-    "Show scientific news from major journals"
-    (interactive)
-    (elfeed--read-tag "@1-month-ago +unread +sciencejournal" "scientific journals"))
-
   (defun elfeed-read-comics ()
 	"show comics"
 	(interactive)
@@ -337,16 +323,7 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
 	"show friends articles"
 	(interactive)
 	(elfeed--read-tag "@1-month-ago +unread +friends" "friends"))
-
-  (defun elfeed-read-boardgames ()
-	"show boardgames articles"
-	(interactive)
-	(elfeed--read-tag "@1-month-ago +unread +boardgames" "boardgames"))
-  (defun elfeed-read-trading ()
-	"show trading articles"
-	(interactive)
-	(elfeed--read-tag "@1-month-ago +unread +trading" "trading"))
-  )
+)
 
 (use-package elfeed-org
   :ensure t
