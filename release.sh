@@ -48,4 +48,8 @@ cp -r ~/scripts/ ./
 mkdir -p cmus
 cp ~/.config/cmus/rc cmus/rc
 
+# zathura config
+mkdir -p zathura
+cp ~/.config/zathura/zathurarc zathura/zathurarc
+
 echo "== Finished! =="
