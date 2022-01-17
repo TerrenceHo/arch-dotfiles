@@ -44,4 +44,8 @@ cp -r ~/.config/rofi/* ./rofi
 mkdir -p scripts
 cp -r ~/scripts/ ./
 
+# cmus config
+mkdir -p cmus
+cp ~/.config/cmus/rc cmus/rc
+
 echo "== Finished! =="
