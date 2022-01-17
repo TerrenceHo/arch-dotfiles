@@ -31,7 +31,16 @@ Plug 'junegunn/limelight.vim' "Highlights current line
 " Tmux Integration
 Plug 'christoomey/vim-tmux-navigator' "navigate tmux/vim splits easily
 
+" LSP Config
+Plug 'neovim/nvim-lspconfig' "neovim internal lsp
+
+" Google vim configs
+Plug 'google/vim-maktaba'
+Plug 'google/vim-glaive'
+Plug 'google/vim-codefmt'
+
 call plug#end()
+call glaive#Install()
 
 " ----- Tabs/Spacing -----
 set tabstop=4       " The width of a TAB is set to 4.
@@ -126,6 +135,13 @@ autocmd BufLeave ?makefile* set include&
 " Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+" ----- codefmt -----
+augroup autoformat_settings
+    autocmd FileType bzl AutoFormatBuffer buildifier
+    autocmd FileType c,cpp,proto AutoFormatBuffer clang-format
+    autocmd FileType go AutoFormatBuffer gofmt
+augroup END
+
 " ----- Airline -----
 set laststatus=2
 set ttimeoutlen=50
@@ -137,3 +153,9 @@ let g:fzf_layout = { 'down': '40%' }
 
 " ----- Easy Align -----
 xmap ga <Plug>(EasyAlign)
+
+" ----- nvim-lspconfig -----
+lua << EOF
+require'lspconfig'.gopls.setup{}
+EOF
+

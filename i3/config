@@ -142,7 +142,7 @@ bindsym $mod+o open
 set $ws1 "1:web"
 set $ws2 "2:term"
 set $ws3 "3:emacs"
-set $ws4 "4:mail"
+set $ws4 "4:music"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -189,20 +189,20 @@ set $display2 DP-2
 workspace $ws1 output $display1
 workspace $ws2 output $display2
 workspace $ws3 output $display2
-workspace $ws4 output $display1
+workspace $ws4 output $display2
+
+# start applications
+exec --no-startup-id i3-msg 'workspace 1:web; exec /usr/bin/firefox'
+exec --no-startup-id i3-msg 'workspace 2:term; exec /usr/bin/urxvt'
+exec --no-startup-id i3-msg 'workspace 3:emacs; exec /usr/bin/emacs'
+exec --no-startup-id i3-msg 'workspace 4:music; exec /usr/bin/urxvt -e cmus'
 
 # assign applications workspaces
 assign [class="firefox"] $ws1
 assign [class="Chromium"] $ws1
-assign [class="URxvt"] $ws2
-assign [class="Emacs"] $ws3
-assign [class="Thunderbird"] $ws4
-
-# start applications
-exec --no-startup-id i3-msg 'workspace 1:firefox; exec /usr/bin/firefox; workspace 1'
-exec --no-startup-id i3-msg 'workspace 2:URxvt; exec /usr/bin/urxvt; workspace 1'
-exec --no-startup-id i3-msg 'workspace 3:Emacs; exec /usr/bin/emacs; workspace 1'
-exec --no-startup-id i3-msg 'workspace 4:Thunderbird; exec /usr/bin/thunderbird; workspace 1'
+# assign [class="URxvt"] $ws2
+# assign [class="Emacs"] $ws3
+# assign [class="Thunderbird"] $ws5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
