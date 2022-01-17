@@ -34,7 +34,7 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock -l $HOME/scripts/lock.sh
 # bind lock session key
-bindsym $mod+z exec $HOME/scripts/lock.sh
+# bindsym $mod+z exec $HOME/scripts/lock.sh
 
 # mode system for lock, logout, shutdown, reboot
 set $mode_system System (l) lock, (e) logout, (r) reboot, (Shift+s) shutdown
@@ -83,6 +83,9 @@ bindsym $mod+Shift+q kill
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+d exec ~/.config/rofi/launchers/misc/launcher.sh
+
+# start ranger (a filesystem manager)
+bindsym $mod+z exec urxvt -e ranger -r ~/.config/ranger
 
 # change focus
 bindsym $mod+h focus left

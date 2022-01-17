@@ -52,4 +52,8 @@ cp ~/.config/cmus/rc cmus/rc
 mkdir -p zathura
 cp ~/.config/zathura/zathurarc zathura/zathurarc
 
+# ranger config
+mkdir -p ranger
+cp ~/.config/ranger/* ranger/
+
 echo "== Finished! =="
