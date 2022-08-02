@@ -55,6 +55,8 @@ URxvt*scrollTtyKeypress: true
 URxvt.scrollBar: false
 ! set spacing a little tighter
 URxvt.letterSpace: -1
+! disable confirm-paste, which occurs when pasting text with control characters
+URxvt.perl-ext-common:-confirm-paste
 
 
 !--------------------------------

@@ -249,5 +249,6 @@ bar {
 	position top
     status_command i3status
     font pango:monospace 8
+    tray_output primary
 }
 

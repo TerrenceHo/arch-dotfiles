@@ -56,6 +56,9 @@ alias -g G='| grep'
 alias -g L="| less"
 alias -g M="| most"
 
+# ignore corrections
+alias bazel='nocorrect bazel'
+
 #----------------------------Globbing--------------------
 # Makes globs case-insensitive
 unsetopt case_glob

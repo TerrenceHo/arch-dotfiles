@@ -82,7 +82,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " ----- Copying -----
-set clipboard=unnamed
+set clipboard+=unnamedplus
 set pastetoggle=<F2>
 
 " ----- Searching -----
