@@ -37,5 +37,5 @@ tztime utc {
 }
 
 tztime local {
-	format = "local: %Y-%m-%d %l:%M:%S %p"
+	format = "local: %A %Y-%m-%d %l:%M:%S %p"
 }
