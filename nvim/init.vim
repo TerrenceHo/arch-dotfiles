@@ -84,6 +84,7 @@ nnoremap <C-H> <C-W><C-H>
 " ----- Copying -----
 set clipboard+=unnamedplus
 set pastetoggle=<F2>
+set mouse=
 
 " ----- Searching -----
 set ignorecase
@@ -140,6 +141,8 @@ augroup autoformat_settings
     autocmd FileType bzl AutoFormatBuffer buildifier
     autocmd FileType c,cpp,proto AutoFormatBuffer clang-format
     autocmd FileType go AutoFormatBuffer gofmt
+    autocmd FileType python AutoFormatBuffer black
+    autocmd FileType rust AutoFormatBuffer rustfmt
 augroup END
 
 " ----- Airline -----

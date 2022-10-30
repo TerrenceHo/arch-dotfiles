@@ -56,4 +56,9 @@ cp ~/.config/zathura/zathurarc zathura/zathurarc
 mkdir -p ranger
 cp ~/.config/ranger/* ranger/
 
+# lightdm config
+mkdir -p lightdm
+cp /etc/lightdm/lightdm.conf lightdm/
+cp /etc/lightdm/lightdm-gtk-greeter.conf lightdm/
+
 echo "== Finished! =="

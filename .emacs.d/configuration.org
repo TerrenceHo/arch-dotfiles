@@ -451,6 +451,13 @@ text, even in org mode.
 (add-hook 'org-mode-hook '(lambda () (setq fill-column 80)))
 (add-hook 'org-mode-hook 'auto-fill-mode)
 #+END_SRC
+** Alphabetical Lists
+
+Allow alphabet to be used for lists
+#+BEGIN_SRC emacs-lisp
+(add-hook 'org-mode-hook '(lambda () (setq fill-column 80)))
+(add-hook 'org-mode-hook 'auto-fill-mode)
+#+END_SRC
 ** Exports
 
 We want to be able to export to several different formats.

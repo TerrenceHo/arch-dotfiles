@@ -216,6 +216,9 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
 (add-hook 'org-mode-hook '(lambda () (setq fill-column 80)))
 (add-hook 'org-mode-hook 'auto-fill-mode)
 
+(add-hook 'org-mode-hook '(lambda () (setq fill-column 80)))
+(add-hook 'org-mode-hook 'auto-fill-mode)
+
 (use-package htmlize)
 
 (setq org-latex-with-hyperref nil)
