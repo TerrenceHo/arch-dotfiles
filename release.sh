@@ -61,4 +61,8 @@ mkdir -p lightdm
 cp /etc/lightdm/lightdm.conf lightdm/
 cp /etc/lightdm/lightdm-gtk-greeter.conf lightdm/
 
+# picom config
+mkdir -p picom
+cp ~/.config/picom/picom.conf picom/
+
 echo "== Finished! =="
