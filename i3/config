@@ -82,7 +82,7 @@ bindsym $mod+Shift+q kill
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec ~/.config/rofi/launchers/misc/launcher.sh
+bindsym $mod+d exec ~/.config/rofi/launchers/type-3/launcher.sh
 
 # start ranger (a filesystem manager)
 bindsym $mod+z exec urxvt -e ranger -r ~/.config/ranger
@@ -204,8 +204,8 @@ exec --no-startup-id i3-msg 'workspace 3:emacs; exec /usr/bin/emacs'
 exec --no-startup-id i3-msg 'workspace 4:music; exec /usr/bin/urxvt -e cmus'
 
 # assign applications workspaces
-assign [class="firefox"] $ws1
-assign [class="Chromium"] $ws1
+# assign [class="firefox"] $ws1
+# assign [class="Chromium"] $ws1
 # assign [class="URxvt"] $ws2
 # assign [class="Emacs"] $ws3
 # assign [class="Thunderbird"] $ws5
