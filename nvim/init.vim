@@ -141,8 +141,11 @@ augroup autoformat_settings
     autocmd FileType bzl AutoFormatBuffer buildifier
     autocmd FileType c,cpp,proto AutoFormatBuffer clang-format
     autocmd FileType go AutoFormatBuffer gofmt
+    autocmd FileType javascript,typescript,html,css,sass,scss,less,json,vue AutoFormatBuffer prettier
+    autocmd FileType java google-java-format
     autocmd FileType python AutoFormatBuffer black
     autocmd FileType rust AutoFormatBuffer rustfmt
+    autocmd FileType sh AutoFormatBuffer shfmt
 augroup END
 
 " ----- Airline -----

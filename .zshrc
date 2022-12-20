@@ -91,22 +91,37 @@ export HISTSIZE=100000
 export SAVEHIST=100000
 
 # Uses OS-provided locking mechanisms for the history file if available to possibly improve performance and decrease the chance of corruption
-setopt hist_fcntl_lock
+setopt HIST_FCNTL_LOCK
 
 # Prevents the current line from being saved in the history if it is the same as the previous one
-setopt hist_ignore_dups
+setopt HIST_IGNORE_DUPS
+
+# Ignore all dups in the history
+setopt HIST_IGNORE_ALL_DUPS
+
+# expire a duplicate event first when trimming history
+setopt HIST_EXPIRE_DUPS_FIRST
+
+# don't write duplicate events to history
+setopt HIST_SAVE_NO_DUPS
+
+# don't write events starting with a space
+setopt HIST_IGNORE_SPACE
 
 # Removes superfluous blanks from the history
-setopt hist_reduce_blanks
+setopt HIST_REDUCE_BLANKS
+
+setopt BANG_HIST
 
 # Expands command instead of immediately executing it when using history expansion
-setopt hist_verify
+setopt HIST_VERIFY
 
 # Incrementally append new history lines to history file rather than waiting until the shell exits
-setopt inc_append_history
+setopt INC_APPEND_HISTORY
 
 # Disables sharing history between different zsh sessions
-unsetopt share_history
+unsetopt SHARE_HISTORY
+
 
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
