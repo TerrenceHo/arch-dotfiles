@@ -43,7 +43,7 @@ alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
 alias t='tail -f'
 
 # ripgrep
-alias rg="rg --hidden --glob '!.git''"
+alias rg="rg --hidden --glob '!.git'"
 
 # fzf
 export FZF_DEFAULT_COMMAND="fd --hidden --type f --exclude '.git'/ --strip-cwd-prefix"
