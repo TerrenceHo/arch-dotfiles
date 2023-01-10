@@ -47,6 +47,8 @@ URxvt.keysym.C-question:  resize-font:show
 !--------------------------------
 ! QOL
 !--------------------------------
+!setting geometry height for pixel scaling (for 2560 x 1440 resolution)
+URxvt*geometry: 320x180
 ! scroll in relation to buffer (mouse scroll or page up)
 URxvt*scrollWithBuffer: true
 ! scroll back to bottom on keypress

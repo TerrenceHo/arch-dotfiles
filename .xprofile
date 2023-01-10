@@ -3,7 +3,7 @@
 xrdb -merge "$HOME/.Xresources"
 
 setxkbmap -option caps:escape
-xset mouse 1 0
+xinput --set-prop 15 'libinput Accel Speed' 0.5
 xset s off -dpms
 
 feh --bg-fill --randomize ~/pictures/wallpaper/*
