@@ -171,9 +171,6 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
-#----------------------------SSH-Agent--------------------
-eval $(keychain --eval --quiet id_ed25519)
-
 #----------------------------PROMPT-----------------------
 setopt promptsubst
 autoload -U colors && colors
@@ -210,3 +207,9 @@ function shorten_path_prompt() {
 
 local ret_status="%(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜)"
 PROMPT='${ret_status} %B%F{125}%n%F{245}@%F{166}%m %F{33}$(shorten_path_prompt) %F{61}$(parse_git_branch)%F{245}$ %f%b'
+
+#----------------------------SSH-Agent--------------------
+eval $(keychain --eval --quiet id_ed25519)
+
+#----------------------------OCaml--------------------
+eval $(opam env)

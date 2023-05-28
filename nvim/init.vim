@@ -146,6 +146,7 @@ augroup autoformat_settings
     autocmd FileType python AutoFormatBuffer black
     autocmd FileType rust AutoFormatBuffer rustfmt
     autocmd FileType sh AutoFormatBuffer shfmt
+    autocmd FileType ocaml AutoFormatBuffer ocamlformat
 augroup END
 
 " ----- Airline -----
