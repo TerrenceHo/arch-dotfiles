@@ -31,8 +31,12 @@ Plug 'junegunn/limelight.vim' "Highlights current line
 " Tmux Integration
 Plug 'christoomey/vim-tmux-navigator' "navigate tmux/vim splits easily
 
-" LSP Config
-Plug 'neovim/nvim-lspconfig' "neovim internal lsp
+" AutoComplete
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Google vim configs
 Plug 'google/vim-maktaba'
@@ -51,9 +55,11 @@ set shiftwidth=4    " Indents will have a width of 4
 set softtabstop=4   " Sets the number of columns for a TAB
 set expandtab       " Expand TABs to spaces
 set autoindent 
-set textwidth=80
 set fileformat=unix
 set backspace=indent,eol,start
+set textwidth=80
+
+autocmd bufreadpre *.py,*.go set textwidth=0
 
 " ----- UI -----
 filetype plugin indent on
@@ -154,6 +160,24 @@ set laststatus=2
 set ttimeoutlen=50
 let g:airline#extensions#branch#enabled=1
 
+" ----- Language Client -----
+let g:LanguageClient_serverCommands = {
+  \ 'go': ['gopls'],
+  \ 'python': ['pylsp'],
+  \ }
+nnoremap <leader>r :call LanguageClient_contextMenu()<CR>
+
+" ----- Deoplete -----
+let g:deoplete#enable_at_startup = 1
+imap <expr> <tab>   pumvisible() ? "\<c-n>" : "\<tab>"
+imap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<tab>"
+imap <expr> <cr>    pumvisible() ? deoplete#close_popup() : "\<cr>"
+inoremap <silent><expr><C-Space> deoplete#mappings#manual_complete()
+" let g:deoplete#enable_camel_case = 1
+" set completeopt+=noinsert
+" set completeopt+=noselect
+" set completeopt-=preview
+
 " ----- fzf -----
 set rtp+=/usr/local/opt/fzf
 let g:fzf_layout = { 'down': '40%' }
@@ -162,7 +186,9 @@ let g:fzf_layout = { 'down': '40%' }
 xmap ga <Plug>(EasyAlign)
 
 " ----- nvim-lspconfig -----
-lua << EOF
-require'lspconfig'.gopls.setup{}
-EOF
+" lua << EOF
+" require'lspconfig'.gopls.setup{}
+" EOF
+
+
 
