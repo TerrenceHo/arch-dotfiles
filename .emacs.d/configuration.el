@@ -33,6 +33,9 @@
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (setq ring-bell-function 'ignore)
 
+(set-face-attribute 'default nil :font "DejaVu Sans Mono-12")
+(set-frame-font "DejaVu Sans Mono-12" nil t)
+
 ;; (use-package solarized-theme
 ;;   :config
 ;;   (setq solarized-scale-org-headlines nil)

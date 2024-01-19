@@ -17,7 +17,7 @@ cp ~/.zshenv ./.zshenv
 # i3 configs
 mkdir -p i3
 cp ~/.config/i3/config ./i3/config
-mkdir -p i3status 
+mkdir -p i3status
 cp ~/.config/i3status/config ./i3status/config
 
 # tmux configs
@@ -25,7 +25,8 @@ cp ~/.tmux.conf ./.tmux.conf
 
 # nvim configs
 mkdir -p nvim
-cp ~/.config/nvim/init.vim ./nvim/init.vim
+cp ~/.config/nvim/init.lua ./nvim/init.lua
+cp ~/.config/nvim/init.vim.old ./nvim/init.vim.old
 
 # pavucontrol
 cp ~/.config/pavucontrol.ini ./pavucontrol.ini

@@ -67,8 +67,8 @@ URxvt.letterSpace: -1
 ! URxvt.boldFont: xft:bitstream vera sans mono:bold:size=12:antialias=true
 
 ! xft: DejaVu fonts
-URxvt.font: xft:DejaVu Sans Mono:size=12:antialias=true:hinting=true
-URxvt.boldFont: xft:DejaVu Sans Mono:size=12:antialias=true:hinting=true
+URxvt.font: xft:DejaVu Sans Mono:size=13:antialias=true:hinting=true
+URxvt.boldFont: xft:DejaVu Sans Mono:size=13:antialias=true:hinting=true
 
 !--------------------------------
 ! Colors

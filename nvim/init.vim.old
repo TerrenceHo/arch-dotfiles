@@ -24,10 +24,6 @@ Plug 'vim-airline/vim-airline-themes' "Themes for airline
 
 Plug 'junegunn/fzf.vim' "Fuzzy Search
 
-" Writing
-Plug 'junegunn/goyo.vim' "Distraction free writing
-Plug 'junegunn/limelight.vim' "Highlights current line
-
 " Tmux Integration
 Plug 'christoomey/vim-tmux-navigator' "navigate tmux/vim splits easily
 
@@ -128,7 +124,9 @@ au BufReadPost * call PositionCursonFromViminfo()
 " ----- Colors -----
 syntax on
 syntax enable
-let g:doom_one_terminal_colors = v:true
+" set termguicolors
+" let g:doom_one_terminal_colors = v:true
+" colorscheme doom-one
 highlight VertSplit cterm=None
 
 " ----- File Types -----
@@ -153,6 +151,7 @@ augroup autoformat_settings
     autocmd FileType rust AutoFormatBuffer rustfmt
     autocmd FileType sh AutoFormatBuffer shfmt
     autocmd FileType ocaml AutoFormatBuffer ocamlformat
+    autocmd FileType lua AutoFormatBuffer lua-formatter
 augroup END
 
 " ----- Airline -----

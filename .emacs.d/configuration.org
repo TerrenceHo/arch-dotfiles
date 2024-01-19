@@ -70,6 +70,12 @@ cutting edge.
  (add-hook 'text-mode-hook 'turn-on-auto-fill)
  (setq ring-bell-function 'ignore)
  #+END_SRC
+** Font and sizing
+   Set the global font.
+ #+BEGIN_SRC emacs-lisp
+ (set-face-attribute 'default nil :font "DejaVu Sans Mono-12")
+ (set-frame-font "DejaVu Sans Mono-12" nil t)
+ #+END_SRC
 
 ** Color Scheme
 
