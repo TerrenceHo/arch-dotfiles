@@ -25,7 +25,7 @@ cp ~/.tmux.conf ./.tmux.conf
 
 # nvim configs
 mkdir -p nvim
-cp ~/.config/nvim/init.lua ./nvim/init.lua
+cp -r ~/.config/nvim/* ./nvim/
 cp ~/.config/nvim/init.vim.old ./nvim/init.vim.old
 
 # pavucontrol

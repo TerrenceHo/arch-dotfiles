@@ -1,0 +1,11 @@
+{
+  "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
+  "format-on-save.nvim": { "branch": "main", "commit": "b7ea8d72391281d14ea1fa10324606c1684180da" },
+  "fzf-lua": { "branch": "main", "commit": "f021b287bf095f20cb5062fc9486dd3243ae220c" },
+  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
+  "lualine.nvim": { "branch": "master", "commit": "566b7036f717f3d676362742630518a47f132fff" },
+  "nvim-lspconfig": { "branch": "master", "commit": "7eed8b2150192e5ad05e1886fdf133493ddf2928" },
+  "nvim-treesitter": { "branch": "master", "commit": "5cc562748729b6dc9563ea5a3d676ff102ab38b1" },
+  "onedark.nvim": { "branch": "treesitter", "commit": "460fe426a2a148b2f39f55e86bbc92533b40f4cd" },
+  "vim-tmux-navigator": { "branch": "master", "commit": "38b1d0402c4600543281dc85b3f51884205674b6" }
+}
