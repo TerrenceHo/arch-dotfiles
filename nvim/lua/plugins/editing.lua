@@ -5,7 +5,7 @@ return {
             local actions = require("fzf-lua").actions
             require('fzf-lua').setup({
                 winopts = {
-                    width = 0.5,
+                    width = 0.8,
                     height = 0.5,
                 },
                 actions = {

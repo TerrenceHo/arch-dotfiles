@@ -6,7 +6,7 @@ vim.keymap.set('n', '<C-L>', '<C-W><C-L>')
 
 -- general keybindings
 vim.keymap.set('n', '<leader>w', ':w<CR>')
-vim.keymap.set('n', '<leader>d', ':bd')             -- delete the current buffer
+-- vim.keymap.set('n', '<leader>d', ':bd')             -- delete the current buffer
 vim.keymap.set('n', '<leader>l', ':nohlsearch<CR>') -- get rid of the highlights
 
 -- system clipboard
