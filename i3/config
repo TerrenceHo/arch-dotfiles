@@ -194,8 +194,8 @@ bindsym $mod+m workspace next
 bindsym $mod+p move workspace to output right
 
 # set displays
-set $display1 DP-0
-set $display2 DP-4
+set $display1 DP-4
+set $display2 DP-0
 
 # workspace designation 
 workspace $ws1 output $display1

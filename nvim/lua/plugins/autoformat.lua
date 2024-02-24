@@ -10,7 +10,7 @@ return {
                     cpp = formatters.shell({ cmd = { "clang-format" } }),
                     go = formatters.shell({ cmd = { "gofmt" } }),
                     lua = formatters.lsp,
-                    ocaml = formatters.shell({ cmd = { "ocamlformat" } }),
+                    ocaml = formatters.shell({ cmd = { "ocamlformat", "--name", "%", "-" } }),
                     proto = formatters.shell({ cmd = { "clang-format" } }),
                     python = {
                         formatters.remove_trailing_whitespace,
@@ -18,9 +18,9 @@ return {
                     },
                     rust = formatters.shell({ cmd = { "rustfmt" } }),
                     sh = formatters.shfmt,
+                    terraform = formatters.shell({ cmd = { "terraform", "fmt", "-" } }),
                 }
             })
         end
     },
 }
-

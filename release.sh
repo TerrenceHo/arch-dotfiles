@@ -9,6 +9,7 @@ cp ~/.gitconfig ./.gitconfig
 # x files
 cp ~/.Xresources ./.Xresources
 cp ~/.xprofile ./.xprofile
+cp /etc/X11/xorg.conf ./xorg.conf
 
 # zsh files
 cp ~/.zshrc ./.zshrc
