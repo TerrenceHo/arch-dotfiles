@@ -7,6 +7,7 @@ return {
             format_on_save.setup({
                 formatter_by_ft = {
                     c = formatters.shell({ cmd = { "clang-format" } }),
+                    cmake = formatters.shell({ cmd = { "cmake-format", "-" } }),
                     cpp = formatters.shell({ cmd = { "clang-format" } }),
                     go = formatters.shell({ cmd = { "gofmt" } }),
                     lua = formatters.lsp,

@@ -6,6 +6,10 @@ export LS_COLORS
 export RANGER_LOAD_DEFAULT_RC="FALSE"
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 
+# use clang compilers by default
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
+
 if [[ -z $TMUX ]]; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
