@@ -73,7 +73,7 @@ bindsym $mod+c exec maim -u ~/screenshot.png
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec konsole
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -88,7 +88,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec ~/.config/rofi/launchers/type-3/launcher.sh
 
 # start ranger (a filesystem manager)
-bindsym $mod+z exec urxvt -e ranger -r ~/.config/ranger
+bindsym $mod+z exec konsole -e ranger -r ~/.config/ranger
 
 # start browser
 bindsym $mod+b exec firefox
@@ -141,10 +141,15 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
+# store and retrieve from scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
 
 # key binding for empty container
 bindsym $mod+o open
@@ -205,9 +210,9 @@ workspace $ws4 output $display2
 
 # start applications
 exec --no-startup-id i3-msg 'workspace 1:web; exec /usr/bin/firefox'
-exec --no-startup-id i3-msg 'workspace 2:term; exec /usr/bin/urxvt'
+exec --no-startup-id i3-msg 'workspace 2:term; exec /usr/bin/konsole'
 exec --no-startup-id i3-msg 'workspace 3:emacs; exec /usr/bin/emacs'
-exec --no-startup-id i3-msg 'workspace 4:music; exec /usr/bin/urxvt -e cmus'
+exec --no-startup-id i3-msg 'workspace 4:music; exec /usr/bin/konsole -e cmus'
 
 # assign applications workspaces
 # assign [class="firefox"] $ws1
