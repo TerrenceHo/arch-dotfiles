@@ -209,10 +209,11 @@ workspace $ws3 output $display2
 workspace $ws4 output $display2
 
 # start applications
-exec --no-startup-id i3-msg 'workspace 1:web; exec /usr/bin/firefox'
-exec --no-startup-id i3-msg 'workspace 2:term; exec /usr/bin/konsole'
-exec --no-startup-id i3-msg 'workspace 3:emacs; exec /usr/bin/emacs'
-exec --no-startup-id i3-msg 'workspace 4:music; exec /usr/bin/konsole -e cmus'
+exec i3-msg 'workspace 1:web; exec /usr/bin/firefox'
+exec i3-msg 'workspace 3:emacs; exec /usr/bin/emacs'
+# exec i3-msg 'workspace 4:music; exec /usr/bin/konsole -e cmus'
+# do this last, to make sure it opens in the right window
+exec i3-msg 'workspace 2:term; exec /usr/bin/konsole' 
 
 # assign applications workspaces
 # assign [class="firefox"] $ws1
