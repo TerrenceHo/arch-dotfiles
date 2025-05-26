@@ -176,9 +176,9 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
 
 (setq org-agenda-include-diary t)
 
-(customize-set-variable 'holiday-bahai-holidays nil)
-(customize-set-variable 'holiday-hebrew-holidays nil)
-(customize-set-variable 'holiday-islamic-holidays nil)
+; (customize-set-variable 'holiday-bahai-holidays nil)
+; (customize-set-variable 'holiday-hebrew-holidays nil)
+; (customize-set-variable 'holiday-islamic-holidays nil)
 
 (global-set-key (kbd "C-c c") 'org-capture)
 

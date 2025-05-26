@@ -363,9 +363,9 @@ Enable diary (for holidays)
 
 Skip holidays I do not follow
 #+BEGIN_SRC emacs-lisp
-(customize-set-variable 'holiday-bahai-holidays nil)
-(customize-set-variable 'holiday-hebrew-holidays nil)
-(customize-set-variable 'holiday-islamic-holidays nil)
+; (customize-set-variable 'holiday-bahai-holidays nil)
+; (customize-set-variable 'holiday-hebrew-holidays nil)
+; (customize-set-variable 'holiday-islamic-holidays nil)
 #+END_SRC
 
 ** =org-capture=
