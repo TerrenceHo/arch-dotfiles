@@ -50,7 +50,7 @@ export FZF_DEFAULT_COMMAND="fd --hidden --type f --exclude '.git'/ --strip-cwd-p
 export FZF_DEFAULT_OPTS="-m --layout=reverse --border --height=40% --info=inline"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
-export FZF_CTRL_R_COMMAND="$FZF_DEFAULT_COMMAND"
+# export FZF_CTRL_R_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -f /usr/share/fzf/key-bindings.zsh ] && . /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && . /usr/share/fzf/completion.zsh
 

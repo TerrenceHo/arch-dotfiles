@@ -1,27 +1,38 @@
 return {
-    {
-        'elentok/format-on-save.nvim',
-        config = function()
-            local format_on_save = require("format-on-save")
-            local formatters = require("format-on-save.formatters")
-            format_on_save.setup({
-                formatter_by_ft = {
-                    c = formatters.shell({ cmd = { "clang-format" } }),
-                    cmake = formatters.shell({ cmd = { "cmake-format", "-" } }),
-                    cpp = formatters.shell({ cmd = { "clang-format" } }),
-                    go = formatters.shell({ cmd = { "gofmt" } }),
-                    lua = formatters.lsp,
-                    ocaml = formatters.shell({ cmd = { "ocamlformat", "--name", "%", "-" } }),
-                    proto = formatters.shell({ cmd = { "clang-format" } }),
-                    python = {
-                        formatters.remove_trailing_whitespace,
-                        formatters.black,
-                    },
-                    rust = formatters.shell({ cmd = { "rustfmt" } }),
-                    sh = formatters.shfmt,
-                    terraform = formatters.shell({ cmd = { "terraform", "fmt", "-" } }),
-                }
-            })
-        end
-    },
+	{
+		"stevearc/conform.nvim",
+		event = { "BufWritePre" },
+		cmd = { "ConformInfo" },
+		keys = {
+			{
+				"<leader>a",
+				function()
+					require("confirm").format({ async = true })
+				end,
+				mode = "",
+				desc = "Format buffer",
+			},
+		},
+		opts = {
+			formatters_by_ft = {
+				c = { "clang-format" },
+				cpp = { "clang-format" },
+				go = { "goimports" },
+				javascript = { "prettierd" },
+				lua = { "stylua", lsp_format = "fallback" },
+				proto = { "clang-format" },
+				python = { "black" },
+				rust = { "rustfmt" },
+				sh = { "shfmt" },
+				terraform = { "terraform_fmt" },
+			},
+			format_on_save = {
+				timeout_ms = 1000,
+				lsp_format = "fallback",
+			},
+			default_format_opts = {
+				lsp_format = "fallback",
+			},
+		},
+	},
 }

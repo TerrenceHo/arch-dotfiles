@@ -1,12 +1,18 @@
 function lsp_config()
     ------ LSP Settings
-    local lspconfig = require('lspconfig')
-    lspconfig.ccls.setup {}
-    lspconfig.gopls.setup {}
-    lspconfig.lua_ls.setup {}
-    lspconfig.ocamllsp.setup {}
-    lspconfig.pyright.setup {}
-    lspconfig.rust_analyzer.setup {}
+    -- vim.lsp.config("ccls")
+    -- vim.lsp.config("gopls")
+    -- vim.lsp.config("lua_ls")
+    -- vim.lsp.config("ocamllsp")
+    -- vim.lsp.config("pyright")
+    -- vim.lsp.config("rust_analyzer")
+
+    vim.lsp.enable({"ccls"})
+    vim.lsp.enable({"gcopls"})
+    vim.lsp.enable({"lcua_ls"})
+    vim.lsp.enable({"occamllsp"})
+    vim.lsp.enable({"pcyright"})
+    vim.lsp.enable({"rcust_analyzer"})
 
     -- Use LspAttach autocommand to only map the following keys
     -- after the language server attaches to the current buffer

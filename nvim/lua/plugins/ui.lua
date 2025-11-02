@@ -1,9 +1,11 @@
 return {
     {
         'monsonjeremy/onedark.nvim',
+        priority = 1000,
         branch = 'treesitter',
         config = function()
             require("onedark").setup()
+            require("onedark").load()
         end,
     },
     {
