@@ -15,6 +15,7 @@ return {
 		},
 		opts = {
 			formatters_by_ft = {
+				bzl = { "buildifier" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				go = { "goimports" },

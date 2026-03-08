@@ -27,16 +27,19 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 -- misc settings
-vim.opt.mouse = ""            -- disable mouse
-vim.opt.clipboard = "unnamed" -- use the normal internal clipboard, not the system clipboard
+vim.opt.mouse = "" -- disable mouse
+-- vim.opt.clipboard:append({
+-- 	"unnamed",
+-- 	"unnamedplus",
+-- }) -- use the normal internal clipboard, not the system clipboard
 
 -- TODO: make this more lua friendly in the future!
 -- ensure nvim opens at the same location for a file
 vim.api.nvim_create_autocmd("BufReadPost", {
-    pattern = { "*" },
-    callback = function()
-        if vim.fn.line("'\"") > 1 and vim.fn.line("'\"") <= vim.fn.line("$") then
-            vim.api.nvim_exec("normal! g'\"", false)
-        end
-    end
+	pattern = { "*" },
+	callback = function()
+		if vim.fn.line("'\"") > 1 and vim.fn.line("'\"") <= vim.fn.line("$") then
+			vim.api.nvim_exec("normal! g'\"", false)
+		end
+	end,
 })
