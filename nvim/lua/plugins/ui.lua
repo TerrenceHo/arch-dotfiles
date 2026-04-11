@@ -53,8 +53,9 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
+		lazy = false,
 		config = function()
-			require("nvim-treesitter.configs").setup({
+			require("nvim-treesitter").setup({
 				autoinstall = true,
 				sync_install = false,
 				ensure_installed = {
@@ -90,6 +91,7 @@ return {
 					"vim",
 					"vimdoc",
 					"yaml",
+					"zsh",
 				},
 				highlight = { enable = true, disable = { "c", "cpp" } },
 				indent = { enable = false },
