@@ -20,6 +20,15 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
+
+-- Filetype overrides: 2-space tabs
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "html", "css", "c", "cpp" },
+	callback = function()
+		vim.bo.tabstop = 2
+		vim.bo.shiftwidth = 2
+	end,
+})
 -- vim.opt.textwidth = 80
 
 -- correct splits behavior

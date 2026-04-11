@@ -91,8 +91,8 @@ return {
 					"vimdoc",
 					"yaml",
 				},
-				highlight = { enable = true },
-				indent = { enable = true },
+				highlight = { enable = true, disable = { "c", "cpp" } },
+				indent = { enable = false },
 				autotag = { enable = true },
 			})
 		end,
